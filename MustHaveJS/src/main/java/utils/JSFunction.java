@@ -9,7 +9,7 @@ public class JSFunction {
 						  + "<script>"
 						  + "	alert('"+ msg + "');"
 						  + "	location.href='" + url + "';"
-						  + "<script>";
+						  + "</script>";
 			out.println(script);
 		}
 		catch(Exception e) {}
@@ -21,7 +21,7 @@ public class JSFunction {
 						  + "<script>"
 						  + "	alert('"+ msg + "');"
 						  + "	history.back();"
-						  + "<script>";
+						  + "</script>";
 			out.println(script);
 		}
 		catch (Exception e) {}
