@@ -15,7 +15,7 @@
 	String pass = "1111";
 	String name = "테스트1회원";
 	
-	String sql = "INSERT INTO member VALUES (?, ?, ?, sysdate')";
+	String sql = "INSERT INTO member VALUES (?, ?, sysdate, ?)";
 	PreparedStatement psmt = jdbc.con.prepareStatement(sql);
 	psmt.setString(1, id);
 	psmt.setString(2, pass);
