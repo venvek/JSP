@@ -3,7 +3,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-<%@ include file="./IsLoggedln.jsp" %>
+<%@ include file="./IsLoggedIn.jsp" %>
 <%
 String num = request.getParameter("num");
 BoardDAO dao = new BoardDAO(application);

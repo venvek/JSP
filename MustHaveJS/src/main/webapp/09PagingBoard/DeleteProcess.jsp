@@ -2,7 +2,7 @@
 <%@page import="model1board.BoardDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ include file="./IsLoggedln.jsp"%>
+<%@ include file="./IsLoggedIn.jsp"%>
 <%
 String num = request.getParameter("num");
 BoardDTO dto = new BoardDTO();

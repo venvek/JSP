@@ -1,13 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ include file="./IsLoggedln.jsp" %> 
+<%@ include file="./IsLoggedIn.jsp" %> 
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>회원제 게시판</title>
 <script type="text/javascript">
-
 function validateForm(form) {
 	if (form.title.value == "") {
 		alert("제목을 입력하세요.");
