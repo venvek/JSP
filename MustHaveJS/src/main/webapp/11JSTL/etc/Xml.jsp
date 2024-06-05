@@ -17,7 +17,7 @@
 	가격 : <x:out select="$blist/booklist/book[1]/price" /> <br />	
 	
 	<h4>파싱 2</h4>
-	<table border="1">
+	<table border="1">	
 		<tr>
 			<th>제목</th><th>저자</th><th>가격</th>
 		</tr>
