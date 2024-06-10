@@ -6,7 +6,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.sql.Date;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -19,7 +18,7 @@ import jakarta.servlet.http.Part;
 public class FileUtil {
 
 	public static String uploadFile(HttpServletRequest req, String sDirectory) throws ServletException, IOException {
-		Part part = req.getPart("attachedFile");
+		Part part = req.getPart("ofile");
 		String partHeader = part.getHeader("content-disposition");
 		String[] phArr = partHeader.split("filename=");
 		String originalFileName = phArr[1].trim().replace("\"", "");

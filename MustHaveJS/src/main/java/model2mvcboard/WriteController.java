@@ -24,12 +24,12 @@ public class WriteController extends HttpServlet {
 		String saveDirectory = req.getServletContext().getRealPath("/Uploads");
 		
 		String originalFileName = "";
-		System.out.println(" +++ " + originalFileName + "-----");
 		try {
 				originalFileName = FileUtil.uploadFile(req, saveDirectory);
 		}
 		
 		catch (Exception e) {
+				e.printStackTrace();
 				JSFunction.alertLocation(resp, "파일 업로드 오류입니다.", "../mvcboard/write.do");
 				return;
 		}
