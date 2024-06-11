@@ -12,7 +12,6 @@ import jakarta.servlet.http.HttpServletResponse;
 
 @WebServlet("/mvcboard/view.do")
 public class ViewController extends HttpServlet {
-	
 	private static final long serialVersionUID = 1L;
 	@Override	
 	protected void service(HttpServletRequest req, HttpServletResponse resp) 
@@ -24,8 +23,9 @@ public class ViewController extends HttpServlet {
 			MVCBoardDTO dto = dao.selectView(idx);
 			dao.close();
 			
-			dto.setContent(dto.getContent().replaceAll("\r\n", "<br/>"));
-			
+			if(!dto.getContent().isEmpty()) {
+				dto.setContent(dto.getContent().replaceAll("\r\n", "<br/>"));
+			}
 			String ext = null, fileName = dto.getSfile();
 			if(fileName!=null) {
 				ext = fileName.substring(fileName.lastIndexOf(".")+1);

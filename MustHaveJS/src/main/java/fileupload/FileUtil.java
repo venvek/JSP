@@ -38,6 +38,14 @@ public class FileUtil {
 
 		return newFileName;
 	}
+	
+	public static void deleteFile(HttpServletRequest req, String deirectory, String filename) {
+		String sDirectory = req.getServletContext().getRealPath(deirectory);
+		File file = new File(sDirectory + File.separator + filename);
+		if (file.exists()) {
+			file.delete();
+		}
+	}
 
 	public static ArrayList<String> multupleFile(HttpServletRequest req, String sDirectory)
 			throws ServletException, IOException {

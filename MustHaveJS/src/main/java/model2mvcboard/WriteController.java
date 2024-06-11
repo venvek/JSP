@@ -9,6 +9,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import utils.JSFunction;
 
+
 public class WriteController extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
